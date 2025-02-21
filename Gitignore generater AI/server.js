@@ -10,7 +10,7 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 const genAI = new GoogleGenerativeAI("process.env.API_KEY");
-const model = genAI.getGenerativeModel({ model: "gemini-2.0-flash" });
+const model = genAI.getGenerativeModel({ model: "gemini-1.5-pro" });
 
 app.post("/generate", async (req, res) => {
   const { language } = req.body;
